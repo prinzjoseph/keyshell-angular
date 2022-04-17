@@ -15,6 +15,7 @@ ssh root@3.111.53.6 "rm -rf /var/www/html/"
 echo "Deploying keyshell-angular"
 rsync -av dist/keyshell root@3.111.53.6:/var/www/html/
 
+#Checking if build was successful
 if [ $? -eq 0 ]; then
   echo "Deployment successful"
 else
